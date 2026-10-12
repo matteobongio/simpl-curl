@@ -21,6 +21,13 @@
               gopls
             ];
           };
+       packages.${system}.default = pkgs.buildGoModule rec {
+        name = "simpl-curl";
+
+        src = ./.;
+
+        vendorHash = null;
+      };
     };
 }
 
